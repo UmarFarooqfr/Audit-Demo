@@ -64,7 +64,15 @@
           <span> Entries (2) // Entries ($Count of Entries_Total)</span>
           <button mat-raised-button> + Add</button>
         </div>
-        <div class="entity-table"  >
+        <div class="entity-table" cdkDropList (cdkDropListDropped)="drop($event)"  >
+          <div class="entity-row-one" cdkDrag *ngFor="let movie of movies" cdkDragPreviewContainer="parent">
+            <div style="border-top: none;">
+              <span class="drag-text">{{movie}}</span>
+              <span  matBadge="3" matBadgeOverlap="false" class="demo-section">BIlder</span>
+              <button  style="margin-right: 10px;" mat-raised-button>Delete</button>
+            </div>
+          </div>
+<!-- 
           <div class="entity-row-one" >
             <div style="border-top: none;">
               <span class="drag-text">AT-BMA001 4001. CRM Rauchmelder 1563/1(gefahrliche Mangel)</span>
@@ -92,7 +100,7 @@
               <span  matBadge="3" matBadgeOverlap="false" class="demo-section">BIlder</span>
               <button style="margin-right: 10px;"  mat-raised-button>Delete</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="entries-two">

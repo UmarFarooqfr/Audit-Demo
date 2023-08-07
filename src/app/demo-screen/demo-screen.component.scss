@@ -1,3 +1,13 @@
+:host ::ng-deep{
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: black;
+}
+.mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+  background-color: gray;
+}
+
+
+}
 .main-container {
   .audit-contaier {
     width: 100%;
@@ -117,6 +127,7 @@
           .entity-row-one {
             height: 11%;
             width: 100%;
+            cursor: move;
 
             div {
               height: 100%;
