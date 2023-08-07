@@ -1,0 +1,185 @@
+<div class="main-container">
+  <div class="audit-contaier">
+    <div>
+      <span>Audit</span>
+    </div>
+  </div>
+  <div class="table-container">
+    <div class="table">
+      <div class="table-row-one">
+        <div class="col-one">
+          <span class="in-font-weight">AuditReportId</span>
+          <span>2022 0001</span>
+        </div>
+        <div class="col-one">
+          <span class="in-font-weight">Name der Prufung</span>
+          <span>For Company XYZ</span>
+        </div>
+        <div class="col-one">
+          <span class="in-font-weight">Pruftart</span>
+          <span>Sicherheitsbeleuctung</span>
+        </div>
+        <div class="col-one">
+          <span class="in-font-weight">Audit Report</span>
+          <span>BMZ</span>
+        </div>
+        <div class="col-one">
+          <span class="in-font-weight">Status</span>
+          <span>In Progress</span>
+        </div>
+      </div>
+      <div class="table-row-two">
+        <div class="coll-one">
+          <div class="col-two">
+            <span class="in-font-weight">Offline Benutzbar</span>
+            <mat-slide-toggle (change)="valueSet()">
+              <span>{{value?'Online':'Offline'}}</span>
+            </mat-slide-toggle>
+
+          </div>
+          <div class="col-two">
+            <span class="in-font-weight">Action </span>
+            <button mat-raised-button style="width: 75px;"> sync</button>
+          </div>
+          <div class="col-two" style="justify-content: center;">
+            <button mat-raised-button style="margin-top: 20px;">Delete</button>
+          </div>
+
+        </div>
+        <div class="coll-two">
+          <!-- <div class="two-button"> -->
+          <button mat-raised-button style="margin-top: 20px;">Erfasung Starten</button>
+          <button mat-raised-button style="margin-top: 20px;">Generate Report</button>
+          <!-- </div> -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="entries-container">
+    <div class="entries">
+      <div class="entries-one">
+        <div class="heading">
+          <span> Entries (2) // Entries ($Count of Entries_Total)</span>
+          <button mat-raised-button> + Add</button>
+        </div>
+        <div class="entity-table"  >
+          <div class="entity-row-one" >
+            <div style="border-top: none;">
+              <span class="drag-text">AT-BMA001 4001. CRM Rauchmelder 1563/1(gefahrliche Mangel)</span>
+              <span  matBadge="3" matBadgeOverlap="false" class="demo-section">BIlder</span>
+              <button  style="margin-right: 10px;" mat-raised-button>Delete</button>
+            </div>
+          </div>
+          <div class="entity-row-one" >
+            <div>
+              <span class="drag-text">AT-BMA002 4001. CRM Rauchmelder 1563/1(gefahrliche Mangel)</span>
+              <span  matBadge="3" matBadgeOverlap="false" class="demo-section">BIlder</span>
+              <button style="margin-right: 10px;" mat-raised-button>Delete</button>
+            </div>
+          </div>
+          <div class="entity-row-one" >
+            <div>
+              <span class="drag-text">SIBE-001 4001. CRM Rauchmelder 1563/1(gefahrliche Mangel)</span>
+              <span  matBadge="3" matBadgeOverlap="false" class="demo-section">BIlder</span>
+              <button style="margin-right: 10px;"  mat-raised-button>Delete</button>
+            </div>
+          </div>
+          <div class="entity-row-one" >
+            <div>
+              <span class="drag-text">AT-BMA003 4001. CRM Rauchmelder 1563/1(gefahrliche Mangel)</span>
+              <span  matBadge="3" matBadgeOverlap="false" class="demo-section">BIlder</span>
+              <button style="margin-right: 10px;"  mat-raised-button>Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="entries-two">
+        <div class="entries">
+        <div class="heading">
+          <span> Audit Item</span>
+        </div>
+        <div class="entity-main">
+          <div class="two-buttons">
+            <button mat-raised-button> Back </button>
+            <button mat-raised-button> Next Entry </button>
+          </div>
+          <div class="inputs">
+            <div class="input-one">
+              <div class="row-one">
+<mat-form-field style="width: 45%;">
+  <mat-label>Analgentyp</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field style=" width: 45%;margin-left: 10px;">
+  <mat-label>Raumlichkeit</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let food of foods" [value]="food.value">
+      {{food.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+              </div>
+              <div class="row-two">
+                <mat-form-field style="width: 95%;">
+                  <mat-label>Prufgegenstand</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let food of foods" [value]="food.value">
+                      {{food.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="texterea">
+              <span>kritikailtant</span>
+              <textarea></textarea>
+            </div>
+          </div>
+          <div class="footer-two-input">
+            <input type="text" placeholder="Prufgegenstand Nr.">
+            <mat-form-field style="margin-left: 10px;">
+              <mat-label>Prufgegenstand Nr.</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="footer-textera" style="height: 15%;">
+           <textarea placeholder="Textanderung"></textarea>
+           <div>
+            <button mat-raised-button>Andern</button>
+            <mat-checkbox style="margin-top: 10px;">Als Bemerkung</mat-checkbox>
+           </div>
+          </div>
+          <div class="footer-img">
+            <div class="camera-icon">
+            <mat-icon style="font-size: xx-large;" >camera_enhance</mat-icon>
+          </div>
+          <div class="picture">
+<img src="../../assets/Screenshot_1.png">
+          </div>
+          <div class="picture">
+<img src="../../assets/Screenshot_1.png">
+          </div>
+
+
+          </div>
+          <div class="two-buttons" style="margin-top: 30px;">
+            <button mat-raised-button> Back </button>
+            <button mat-raised-button> Next Entry </button>
+          </div>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

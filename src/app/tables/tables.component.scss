@@ -1,0 +1,93 @@
+.main-cotainer{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+
+  .container{
+    width: 90%;
+    height: 90%;
+    margin-top: 40px;
+    border: 2px solid gray;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    .two-buttons {
+      width: 95%;
+      height: 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .textera{
+      width: 95%;
+      height: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      textarea{
+        width:90% ;
+        height: 90%;
+        resize: none;
+      }
+    }
+    .auto-complete-search{
+      width: 86%;
+      height: 5%;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-top: 20px;
+      input{
+        width: 30%;
+        height: 80%;
+      }
+    }
+    .table-container{
+      width: 86%;
+      height: 50%;
+      display: flex;
+      // justify-content: start;
+      // align-items: center;
+      margin-top: 20px;
+      border: 2px solid gray;
+      .container-table{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .table{
+          width: 100%;
+          height: 16.6%;
+          border-bottom: 1px solid gray;
+          display: flex;
+          flex-direction: row;
+          .table-row-one{
+            width: 20%;
+            height: 100%;
+            display: flex;
+  align-items: center;
+  border-right: 1px solid gray;
+          }
+          .table-row-two{
+            width: 20%;
+            height: 100%;
+            display: flex;
+  align-items: center;
+  border-right: 1px solid gray;
+
+          }
+          .table-row-three{
+            width: 60%;
+            height: 100%;
+            display: flex;
+  align-items: center;
+          }
+        }
+      }
+
+    }
+
+  }
+}
