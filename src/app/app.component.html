@@ -1,2 +1,6 @@
-<app-demo-screen></app-demo-screen>
-<!-- <app-tables></app-tables> -->
+
+<button *ngIf="isTableFormPage" mat-raised-button routerLink="audit-form">Audit-form</button>
+<button *ngIf="isAuditFormPage" mat-raised-button routerLink="table-form">Table-form</button>
+<router-outlet></router-outlet>
+
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'demo-project';
+  constructor(private readonly router: Router){}
+  get isAuditFormPage(){
+    return this.router.url.includes('/audit-form');
+  }
+  get isTableFormPage(){
+    return this.router.url.includes('/table-form');
+  }
 }
